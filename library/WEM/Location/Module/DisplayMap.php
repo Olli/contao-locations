@@ -102,8 +102,8 @@ class DisplayMap extends \Module
 				,"phone" => $objLocations->phone
 				,"email" => $objLocations->email
 				,"url" => $objLocations->website
-				,"lat" => $objLocations->lat
-				,"lng" => $objLocations->lng
+				,"lat" => empty($objLocations->lat) ? "0.0" : $objLocations->lat
+				,"lng" => empty($objLocations->lng) ? "0.0" : $objLocations->lng
 				,"country" => [
 					"code" => $strCountry
 					,"name" => $GLOBALS['TL_LANG']['CNT'][$objLocations->country]

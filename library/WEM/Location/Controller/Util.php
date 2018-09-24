@@ -25,10 +25,15 @@ class Util extends Controller
 		$arrCountries = \System::getCountries();
 
 		foreach($arrCountries as $strIsoCode => $strName)
-		{	
+		{
 			// Use Generate Alias to handle little imperfections
-			if(\StringUtil::generateAlias($strName) == \StringUtil::generateAlias($strFullname))
+			if(\StringUtil::generateAlias($strName) == \StringUtil::generateAlias($strFullname)) {
 				return $strIsoCode;
+			// also check if the country fields has an iso code
+			} elseif(\StringUtil::generateAlias($strIsoCode) == \StringUtil::generateAlias($strFullname)) {
+				return $strIsoCode;
+			}
+
 		}
 
 		// If nothing, send an exception, because the name is wrong

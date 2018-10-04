@@ -107,7 +107,7 @@ $GLOBALS['TL_DCA']['tl_wem_map'] = array
 	'subpalettes' => array
 	(
 		'mapProvider_jvector' =>'mapConfig',
-		'mapProvider_leaflet' => 'mapConfig',
+		'mapProvider_leaflet' => '',
 		'mapProvider_gmaps' => 'mapProviderGmapKey,mapConfig',
 		'geocodingProvider_gmaps' => 'geocodingProviderGmapKey',
 	),

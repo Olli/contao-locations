@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	objMap.setView(objMapBounds.getCenter(),13);
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-  minZoom: 8, maxZoom: 12 }).addTo(objMap);
+  minZoom: 1, maxZoom: 12 }).addTo(objMap);
 
 	objMap.fitBounds(objMapBounds);
 

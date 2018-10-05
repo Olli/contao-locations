@@ -16,7 +16,7 @@
         </div>
       <?php endforeach ?>
     </div>
-  </div>
+  
 
   <script>
     var objMapData = <?= json_encode($this->locations) ?>;

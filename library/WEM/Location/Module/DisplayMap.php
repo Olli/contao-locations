@@ -98,7 +98,8 @@ class DisplayMap extends \Module
 			$strContinent = Util::getCountryContinent($strCountry);
 
 			$arrLocation = [
-				"name" => $objLocations->title
+				"aliasId" => StringUtil::generateAlias($strCountry.'-'.str_replace(' ', '_', strtolower($objLocations->title)))
+				,"name" => $objLocations->title
 				,"address" => $objLocations->street." ".$objLocations->postal." ".$objLocations->city
 				,"phone" => $objLocations->phone
 				,"email" => $objLocations->email

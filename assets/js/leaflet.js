@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		  arrCountries.push(location.country.code);
 		  arrCountriesAvailable.push(location.country.code);
 		}
-		objMarkers[location.country.code+'-'+location.name.toLowerCase().replace(/\s/g,'_')]={
+		objMarkers[location.aliasId]={
 		  country: location.country.code,
 		  continent: location.continent.code,
 		  name: location.name,

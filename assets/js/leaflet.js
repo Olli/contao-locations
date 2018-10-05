@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		};
 	});
 
-	objMap = L.map(document.querySelector('.mod_wem_locations_map'));
+	objMap = L.map(document.querySelector('.mod_wem_locations_map .map__container'));
 
 
 

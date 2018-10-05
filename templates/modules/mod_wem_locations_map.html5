@@ -2,7 +2,11 @@
 <div class="mod_wem_locations_map error block"><?= $this->msg ?></div>
 <?php else: ?>
 <div class="mod_wem_locations_map block">
+  <div class="map__container"></div>
+
   <button class="map__reset"><?= $GLOBALS['TL_LANG']['WEM']['LOCATIONS']['BUTTON']['BACK'] ?></button>
+
+
   <div class="map__content">
     <div class="map__content__title"><?= $GLOBALS['TL_LANG']['WEM']['LOCATIONS']['TITLE']['PANEL'] ?></div>
     <div class="map__content__wrapper">

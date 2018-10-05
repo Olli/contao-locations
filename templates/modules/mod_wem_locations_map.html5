@@ -7,7 +7,7 @@
     <div class="map__content__title"><?= $GLOBALS['TL_LANG']['WEM']['LOCATIONS']['TITLE']['PANEL'] ?></div>
     <div class="map__content__wrapper">
       <?php foreach ($this->locations as $key => $location): ?>
-        <div class="map__content__item" data-marker="<?= $location['aliasId'])) ?>" data-country="<?= $location['country']['code'] ?>" data-continent="<?= $location['continent']['code'] ?>">
+        <div class="map__content__item" data-marker="<?= $location['aliasId'] ?>" data-country="<?= $location['country']['code'] ?>" data-continent="<?= $location['continent']['code'] ?>">
           <div class="map__content__item__name"><?= $location['name'] ?></div>
           <div class="map__content__item__address"><?= $location['address'] ?></div>
           <div class="map__content__item__contact__phone"><?= $location['phone'] ?></div>

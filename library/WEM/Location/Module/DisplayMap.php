@@ -11,6 +11,7 @@
 namespace WEM\Location\Module;
 
 use Contao\Combiner;
+use Contao\StringUtil;
 
 use Haste\Http\Response\HtmlResponse;
 use Haste\Http\Response\JsonResponse;

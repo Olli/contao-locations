@@ -53,7 +53,11 @@ document.addEventListener('DOMContentLoaded',function(){
 		}).addTo(objMap);
 
 		objMarkers[i].marker.on('click', function() {
-		  alert("CLIC");
+      let markerContentIdentifier = objMarkers[i];
+      var element;
+		  if(element = document.querySelector("[data-marker="+ i +"]")) {
+        element.classList.add("map__content__item__active");
+      }
 		});
 	}
 	objMap.setView(objMapBounds.getCenter(),13);

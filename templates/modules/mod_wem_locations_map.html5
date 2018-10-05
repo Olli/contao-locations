@@ -12,11 +12,10 @@
           <div class="map__content__item__address"><?= $location['address'] ?></div>
           <div class="map__content__item__contact__phone"><?= $location['phone'] ?></div>
           <div class="map__content__item__contact__phone"><?= $location['email'] ?></div>
-          </div>
         </div>
       <?php endforeach ?>
     </div>
-  
+
 
   <script>
     var objMapData = <?= json_encode($this->locations) ?>;

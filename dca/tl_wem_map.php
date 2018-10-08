@@ -100,7 +100,7 @@ $GLOBALS['TL_DCA']['tl_wem_map'] = array
 			{import_legend},excelPattern;
 			{map_legend},mapProvider;
 			{geocoding_legend},geocodingProvider;
-			{style_legend},customCSS;
+			{customCSS_legend},customCSS;
 		'
 	),
 
@@ -202,7 +202,7 @@ $GLOBALS['TL_DCA']['tl_wem_map'] = array
 			'inputType'								=> 'checkbox',
 			'reference'								=> &$GLOBALS['TL_LANG']['tl_wem_map']['customCSS'],
 			'explanation'							=> &$GLOBALS['TL_LANG']['tl_wem_map']['customCSS'],
-			'eval'                    => array('tl_class'=>'w50'),
+			'eval'                    => array('tl_class'=>'w50','helpwizard'=>true),
 			'sql'                     => "char(1) NOT NULL default ''"
 
 		),

@@ -145,7 +145,7 @@
 			<source>Show map data ID %s</source>
 			<target>Kartendaten von ID %s anzeigen</target>
 		</trans-unit>
-    <trans-unit id="tl_wem_map.style_legend">
+    <trans-unit id="tl_wem_map.customCSS_legend">
       <source>Custom Map CSS Style</source>
       <traget>Eigenes CSS nutzen</target>
     </trans-unit>

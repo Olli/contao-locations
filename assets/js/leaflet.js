@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-	objMapBounds = L.latLngBounds();
-	for(var i in objMarkers){
+	let objMapBounds = L.latLngBounds();
+	for(let i in objMarkers){
 		objMapBounds.extend(objMarkers[i].latLng);
 		objMarkers[i].marker = L.marker(objMarkers[i].latLng,{
 		  title: objMarkers[i].name
@@ -54,13 +54,14 @@ document.addEventListener('DOMContentLoaded',function(){
 
 		objMarkers[i].marker.on('click', function() {
       let markerContentIdentifier = objMarkers[i];
-      var element;
+      let element;
 		  if(element = document.querySelector("[data-marker="+ i +"]")) {
         element.classList.add("map__content__item__active");
       }
 		});
 	}
-	objMap.setView(objMapBounds.getCenter(),5);
+
+  objMap.fitBounds(objMapBounds);
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
   minZoom: 1, maxZoom: 12 }).addTo(objMap);

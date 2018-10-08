@@ -46,19 +46,27 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 	let objMapBounds = L.latLngBounds();
-	for(let i in objMarkers){
+	for(let i in objMarkers) {
 		objMapBounds.extend(objMarkers[i].latLng);
-		objMarkers[i].marker = L.marker(objMarkers[i].latLng,{
-		  title: objMarkers[i].name
-		}).addTo(objMap);
 
-		objMarkers[i].marker.on('click', function() {
-      let markerContentIdentifier = objMarkers[i];
+    let leafletMarker = L.marker(objMarkers[i].latLng,{
+		  title: objMarkers[i].name,
+      itemId: i,
+		});
+
+    leafletMarker.on('click', function(event) {
+      let target = event.target.options.itemId;
       let element;
-		  if(element = document.querySelector("[data-marker="+ i +"]")) {
+      /* remove active classes if any */
+      (document.querySelector(".map__content__item__active")) ? document.querySelector(".map__content__item__active").classList.remove("map__content__item__active") : null ;
+      /* add active classes if found */
+		  if(element = document.querySelector("[data-marker="+ target +"]")) {
         element.classList.add("map__content__item__active");
       }
 		});
+
+    leafletMarker.addTo(objMap);
+    objMarkers[i].marker = leafletMarker;
 	}
 
   objMap.fitBounds(objMapBounds);

@@ -200,6 +200,8 @@ $GLOBALS['TL_DCA']['tl_wem_map'] = array
 			'exclude'									=> true,
 			'default'                 => 0,
 			'inputType'								=> 'checkbox',
+			'reference'								=> &$GLOBALS['TL_LANG']['tl_wem_map']['customCSS'],
+			'explanation'							=> &$GLOBALS['TL_LANG']['tl_wem_map']['customCSS'],
 			'eval'                    => array('tl_class'=>'w50'),
 			'sql'                     => "char(1) NOT NULL default ''"
 

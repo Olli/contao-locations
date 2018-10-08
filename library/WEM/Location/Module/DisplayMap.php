@@ -100,7 +100,7 @@ class DisplayMap extends \Module
 
 			if(!(empty($objLocations->lat) || empty($objLocations->lng))) {
 				$arrLocation = [
-					"aliasId" => StringUtil::generateAlias($strCountry.'-'.str_replace(' ', '_', strtolower($objLocations->title)))
+					"aliasId" => StringUtil::generateAlias($strCountry.'-'strtolower($objLocations->title))
 					,"name" => $objLocations->title
 					,"address" => $objLocations->street." ".$objLocations->postal." ".$objLocations->city
 					,"phone" => $objLocations->phone

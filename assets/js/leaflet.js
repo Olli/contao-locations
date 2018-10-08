@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded',function(){
       /* remove active classes if any */
       if(document.querySelector(".map__content__item__active")) {
          document.querySelector(".map__content__item__active").classList.remove("map__content__item__active");
-         document.querySelector(".map_content_wrapper").classList.remove(".item__is__active");
+         document.querySelector(".map__content__wrapper").classList.remove(".item__is__active");
        }
       /* add active classes if found */
 		  if(element = document.querySelector("[data-marker="+ target +"]")) {
         element.classList.add("map__content__item__active");
         if(!(document.querySelector(".map_content_wrapper").classList.contains(".item__is__active"))) {
-          document.querySelector(".map_content_wrapper").classList.add(".item__is__active");
+          document.querySelector(".map__content__wrapper").classList.add(".item__is__active");
         }
       }
 		});

@@ -99,7 +99,8 @@ $GLOBALS['TL_DCA']['tl_wem_map'] = array
 			{title_legend},title;
 			{import_legend},excelPattern;
 			{map_legend},mapProvider;
-			{geocoding_legend},geocodingProvider
+			{geocoding_legend},geocodingProvider;
+			{style_legend},customCSS;
 		'
 	),
 
@@ -192,6 +193,16 @@ $GLOBALS['TL_DCA']['tl_wem_map'] = array
 			'inputType'               => 'textStore',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'encrypt'=>true),
 			'sql'                     => "varchar(255) NOT NULL default ''"
+		),
+		'customCSS' => array
+		(
+			'label'										=> &$GLOBALS['TL_LANG']['tl_wem_map']['customCSS'],
+			'exclude'									=> true,
+			'default'                 => 0,
+			'inputType'								=> 'checkbox',
+			'eval'                    => array('tl_class'=>'w50'),
+			'sql'                     => "char(1) NOT NULL default ''"
+
 		),
 	)
 );

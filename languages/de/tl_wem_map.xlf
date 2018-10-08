@@ -145,6 +145,9 @@
 			<source>Show map data ID %s</source>
 			<target>Kartendaten von ID %s anzeigen</target>
 		</trans-unit>
+    <trans-unit id="tl_wem_map.customCSS">
+      <source>Use your own custom css map syle</source>
+      <traget>Eigenes CSS zum Stylen der Karte nutzen</target>
     </body>
   </file>
 </xliff>

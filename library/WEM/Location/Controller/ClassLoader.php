@@ -28,10 +28,13 @@ class ClassLoader extends Controller
 		switch($objMap->mapProvider){
 			case 'jvector':
 				$objCombiner = new Combiner();
-				$objCombiner->addMultiple([
-					"system/modules/wem-contao-locations/assets/vendor/jquery-jvectormap/jquery-jvectormap-2.0.3.css"
-					,"system/modules/wem-contao-locations/assets/css/jvector.css"
-				], $strVersion);
+				$cssFiles = ["system/modules/wem-contao-locations/assets/vendor/jquery-jvectormap/jquery-jvectormap-2.0.3.css" ];
+
+				if(!$objMap->customCSS) {
+					array_push($cssFiles,"system/modules/wem-contao-locations/assets/css/jvector.css");
+				}
+
+				$objCombiner->addMultiple($cssFiles, $strVersion);
 				$GLOBALS["TL_HEAD"][] = sprintf('<link rel="stylesheet" href="%s">', $objCombiner->getCombinedFile());
 
 				$objCombiner = new Combiner();
@@ -59,10 +62,12 @@ class ClassLoader extends Controller
 			case 'leaflet':
 
 				$objCombiner = new Combiner();
-				$objCombiner->addMultiple([
-					"system/modules/wem-contao-locations/assets/vendor/leaflet/leaflet.css"
-					,"system/modules/wem-contao-locations/assets/css/leaflet.css"
-				], $strVersion);
+				$cssFiles = ["system/modules/wem-contao-locations/assets/vendor/leaflet/leaflet.css"];
+
+				if(!$objMap->customCSS) {
+					array_push($cssFiles,"system/modules/wem-contao-locations/assets/css/leaflet.css");
+				}
+				$objCombiner->addMultiple($cssFiles, $strVersion);
 				$GLOBALS["TL_HEAD"][] = sprintf('<link rel="stylesheet" href="%s">', $objCombiner->getCombinedFile());
 
 				$GLOBALS['TL_JAVASCRIPT'][] =	"system/modules/wem-contao-locations/assets/vendor/leaflet/leaflet.js";

@@ -15,7 +15,7 @@
           <div class="map__content__item__name"><?= $location['name'] ?></div>
           <div class="map__content__item__address"><?= $location['address'] ?></div>
           <div class="map__content__item__contact__phone"><?= $location['phone'] ?></div>
-          <div class="map__content__item__contact__phone"><?= $location['email'] ?></div>
+          <div class="map__content__item__contact__email"><?= $location['email'] ?></div>
         </div>
       <?php endforeach ?>
     </div>

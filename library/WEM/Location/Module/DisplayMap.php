@@ -103,6 +103,9 @@ class DisplayMap extends \Module
 					"aliasId" => StringUtil::generateAlias($strCountry.'-'.strtolower($objLocations->title))
 					,"name" => $objLocations->title
 					,"address" => $objLocations->street." ".$objLocations->postal." ".$objLocations->city
+					,"street" => $objLocations->street
+					,"postal" => $objLocations->postal
+					,"city"  => $objLocations->city
 					,"phone" => $objLocations->phone
 					,"email" => $objLocations->email
 					,"url" => $objLocations->website

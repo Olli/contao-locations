@@ -6,6 +6,10 @@ Object.hasKey = function(obj,key){
     return false;
 }
 
+/* global reference for later use */
+var objMarkers = {};
+var objMap;
+
 document.addEventListener('DOMContentLoaded',function(){
 
 	// ------------------------------------------------------------------------------------------------------------------------------
@@ -14,13 +18,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	var arrCountriesAvailable = [];
 	var objContinents = {};
 	var objCountries = {};
-	var objMarkers = {};
-	var objMap;
 
-  var $map = document.querySelector('.mod_wem_locations_map');
-  var $reset = document.querySelector('.mod_wem_locations_map .map__reset');
-  var $content = document.querySelector('.mod_wem_locations_map .map__content');
-  var $dropdowns = document.querySelector('.mod_wem_locations_map .map__dropdowns');
 
 	objMapData.forEach(function(location,index){
 		if(!Object.hasKey(objContinents, location.continent.code)){
@@ -80,7 +78,4 @@ document.addEventListener('DOMContentLoaded',function(){
 
 	objMap.fitBounds(objMapBounds);
 
-	//$map.appendChild($reset);
-	//$map.appendChild($content);
-	//$map.appendChild($dropdowns);
 });

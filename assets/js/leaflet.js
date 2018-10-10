@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 	objMap.fitBounds(objMapBounds);
 
-  document.querySelector('.map__reset',function(event){
+  document.querySelector('.map__reset').addEventListener('click',function(event){
     resetActiveContent();
   });
 

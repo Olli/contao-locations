@@ -124,7 +124,7 @@ class DisplayMap extends \Module
 				$arrLocations[] = $arrLocation;
 			}
 		}
-
+			$this->Template->mapTitle = $objMap->title;
 			$this->Template->locations = $arrLocations;
 			$this->Template->config = $arrConfig;
 		}

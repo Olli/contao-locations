@@ -47,10 +47,7 @@
 			<source>Country</source>
 			<target>Land</target>
 		</trans-unit>
-		<trans-unit id="WEM.LOCATIONS.TITLE.PANEL">
-			<source>Contact details for Altrad in</source>
-			<target>Kontaktdetails für Altrad in</target>
-		</trans-unit>
+
 		<trans-unit id="WEM.LOCATIONS.BUTTON.BACK">
 			<source>Back</source>
 			<target>Zurück</target>

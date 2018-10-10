@@ -12,7 +12,7 @@ var objMap;
 
 function resetActiveContent() {
   document.querySelector(".map__content__item__active").classList.remove("map__content__item__active");
-  document.querySelector(".map__content__wrapper").classList.remove(".item__is__active");
+  document.querySelector(".map__content").classList.remove("item__is__active");
 }
 
 document.addEventListener('DOMContentLoaded',function(){
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded',function(){
       /* add active classes if found */
 		  if(element = document.querySelector("[data-marker="+ target +"]")) {
         element.classList.add("map__content__item__active");
-        document.querySelector(".map__content__wrapper").classList.add(".item__is__active");
+        document.querySelector(".map__content").classList.add("item__is__active");
       }
 		});
 

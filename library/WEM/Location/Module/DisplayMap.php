@@ -125,6 +125,7 @@ class DisplayMap extends \Module
 			}
 		}
 			$this->Template->mapTitle = $objMap->title;
+			$this->Template->headline = $this->name;
 			$this->Template->locations = $arrLocations;
 			$this->Template->config = $arrConfig;
 		}

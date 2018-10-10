@@ -10,6 +10,11 @@ Object.hasKey = function(obj,key){
 var objMarkers = {};
 var objMap;
 
+function resetActiveContent() {
+  document.querySelector(".map__content__item__active").classList.remove("map__content__item__active");
+  document.querySelector(".map__content__wrapper").classList.remove(".item__is__active");
+}
+
 document.addEventListener('DOMContentLoaded',function(){
 
 	// ------------------------------------------------------------------------------------------------------------------------------
@@ -57,9 +62,8 @@ document.addEventListener('DOMContentLoaded',function(){
       let element;
       /* remove active classes if any */
       if(document.querySelector(".map__content__item__active")) {
-         document.querySelector(".map__content__item__active").classList.remove("map__content__item__active");
-         document.querySelector(".map__content__wrapper").classList.remove(".item__is__active");
-       }
+        resetActiveContent();
+      }
       /* add active classes if found */
 		  if(element = document.querySelector("[data-marker="+ target +"]")) {
         element.classList.add("map__content__item__active");
@@ -77,5 +81,10 @@ document.addEventListener('DOMContentLoaded',function(){
   minZoom: 1, maxZoom: 12 }).addTo(objMap);
 
 	objMap.fitBounds(objMapBounds);
+
+  document.querySelector('.map__reset',function(event){
+    resetActiveContent();
+  });
+
 
 });

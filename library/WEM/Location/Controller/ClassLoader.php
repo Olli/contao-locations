@@ -71,7 +71,7 @@ class ClassLoader extends Controller
 				$GLOBALS["TL_HEAD"][] = sprintf('<link rel="stylesheet" href="%s">', $objCombiner->getCombinedFile());
 
 				$GLOBALS['TL_JAVASCRIPT'][] =	"system/modules/wem-contao-locations/assets/vendor/leaflet/leaflet.js";
-				$GLOBALS['TL_JAVASCRIPT'][] =	"system/modules/wem-contao-locations/assets/js/leaflet.js|async";
+				$GLOBALS['TL_JAVASCRIPT'][] =	"system/modules/wem-contao-locations/assets/js/leaflet.js";
 
 			break;
 			default:

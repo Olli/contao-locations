@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_wem_location'] = array
 		'onload_callback'			  => array
 		(
 			array('tl_wem_location', 'checkIfGeocodeExists'),
-		),	
+		),
 		'onsubmit_callback'			  => array
 		(
 			//array('tl_wem_location', 'fetchCoordinates'),
@@ -190,7 +190,7 @@ $GLOBALS['TL_DCA']['tl_wem_location'] = array
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),
-		
+
 		// {street_legend},street,postal,city,region,country;
 		'street' => array
 		(
@@ -270,7 +270,7 @@ $GLOBALS['TL_DCA']['tl_wem_location'] = array
 );
 
 // Load JS to handle backend events
-$GLOBALS["TL_JAVASCRIPT"][] = 'https://code.jquery.com/jquery-3.3.1.min.js';
+$GLOBALS["TL_JAVASCRIPT"][] =  'assets/jquery/js/jquery.min.js|static';
 $GLOBALS["TL_JAVASCRIPT"][] = 'system/modules/wem-contao-locations/assets/backend/backend.js';
 
 /**

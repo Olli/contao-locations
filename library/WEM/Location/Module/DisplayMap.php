@@ -92,6 +92,7 @@ class DisplayMap extends \Module
 				}
 			}
 
+
 		$arrLocations = array();
 		while($objLocations->next())
 		{
